@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-test-configmap
+spec:
+  containers:
+    - name: container-busybox
+      image: k8s.gcr.io/busybox
+      command: ["/bin/sh","-c","env"]
+      # untuk melakukan binding / mapping dari ConfigMap Kubernets ke Container
+      env:
+        - name: DATA_NAMA      
+          valueFrom:
+            configMapKeyRef:
+              name: data-diri-configmap
+              key: nama
+        - name: DATA_ALAMAT
+          valueFrom:
+            configMapKeyRef:
+              name: data-diri-configmap
+              key: alamat
+        - name: DATA_HOBI
+          valueFrom:
+            configMapKeyRef:
+              name: data-diri-configmap
+              key: hobi
+  restartPolicy: Never 

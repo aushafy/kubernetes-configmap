@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: data-configmap
+data:
+  DATA_CONTOH: data_test
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: special-configmap
+data:
+  CHARACTER: first_character

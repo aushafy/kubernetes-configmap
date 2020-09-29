@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: data-dummy-configmap
+data:
+  FULL_NAME: aushafy
+  LAST_NAME: setyawam
+  HOBBY: memancing
+  ADDRESS: Jakarta
+  MOVIE: Up
+  HISTORY: Legend
